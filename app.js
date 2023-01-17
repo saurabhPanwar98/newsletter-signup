@@ -5,6 +5,7 @@ const { options } = require("request");
 
 
 const app = express();
+let headAuthenticator = 'arav1:f07a7c1f239e082538769a95e0831ca2-us21'
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
@@ -34,7 +35,7 @@ app.post("/",function(req,res){
 
     const options = {
         method:'POST',
-        auth:'arav1:f07a7c1f239e082538769a95e0831ca2-us21',
+        auth:headAuthenticator,
         // headers:{
         //     'Content-Type':'application/json'
         // }
@@ -77,9 +78,3 @@ app.listen(process.env.PORT || 3000,function(){
 
 
 
-
-// Api key
-// cd11997a072765c044a62d151dcfb58a-us21
-
-// list id
-// 269560bab8
