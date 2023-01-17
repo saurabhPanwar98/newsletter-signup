@@ -5,7 +5,7 @@ const { options } = require("request");
 
 
 const app = express();
-let headAuthenticator = 'arav1:f07a7c1f239e082538769a95e0831ca2-us21'
+let headAuthenticator = 'arav1:9cea68a13e58bf383cf8198893bc1e3b-us21'
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
