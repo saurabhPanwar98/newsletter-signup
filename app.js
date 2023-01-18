@@ -2,10 +2,15 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const https = require("https");
 const { options } = require("request");
+require("dotenv").config();
 
 
 const app = express();
-let headAuthenticator = 'arav1:9cea68a13e58bf383cf8198893bc1e3b-us21'
+
+const headData = process.env.HEAD_AUTHENTICATION;
+
+
+const ex = 'arav1:04936f844f7fffb83a8c2e1074a46ced-us21'
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
@@ -35,7 +40,7 @@ app.post("/",function(req,res){
 
     const options = {
         method:'POST',
-        auth:headAuthenticator,
+        auth:headData,
         // headers:{
         //     'Content-Type':'application/json'
         // }
